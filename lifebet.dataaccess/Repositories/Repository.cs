@@ -1,6 +1,10 @@
 ﻿using lifebet.dataaccess.Context;
 using lifebet.entity;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace lifebet.dataaccess.Repositories
@@ -32,11 +36,6 @@ namespace lifebet.dataaccess.Repositories
             DbSet.Add(obj);
         }
 
-        public virtual TEntity Get(TId id)
-        {
-            return DbSet.Find(id);
-        }
-
         public virtual void Update(TEntity obj)
         {
             DbSet.Update(obj);
@@ -45,6 +44,11 @@ namespace lifebet.dataaccess.Repositories
         public virtual void Remove(TId id)
         {
             DbSet.Remove(DbSet.Find(id));
+        }
+
+        public async Task<TEntity[]> GetAsync(Expression<Func<TEntity, bool>> filter)
+        {
+            return await DbSet.Where(filter).ToArrayAsync();
         }
     }
 }

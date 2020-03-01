@@ -14,7 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateDatabase", "CreateDat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_scripts", "db_scripts", "{C0CAFEEB-F0AB-483C-911E-4FE01608D4B4}"
 	ProjectSection(SolutionItems) = preProject
-		db_scripts\v1.1_CreateEventsTable.sql = db_scripts\v1.1_CreateEventsTable.sql
+		db_scripts\V1.1__Create_Events_Table.sql = db_scripts\V1.1__Create_Events_Table.sql
+		db_scripts\V1.2__Create_Options_And_Bets.sql = db_scripts\V1.2__Create_Options_And_Bets.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lifebet.entity", "lifebet.entity\lifebet.entity.csproj", "{31F1AB09-64E1-434F-A0FB-3A059B1503A6}"

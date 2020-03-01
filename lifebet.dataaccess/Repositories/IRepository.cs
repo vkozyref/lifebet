@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace lifebet.dataaccess.Repositories
 {
@@ -7,7 +9,7 @@ namespace lifebet.dataaccess.Repositories
         Task AddAsync(TEntity obj);
         Task<TEntity> GetAsync(TId id);
         void Add(TEntity obj);
-        TEntity Get(TId id);
+        Task<TEntity[]> GetAsync(Expression<Func<TEntity, bool>> filter);
         void Update(TEntity obj);
         void Remove(TId id);
     }

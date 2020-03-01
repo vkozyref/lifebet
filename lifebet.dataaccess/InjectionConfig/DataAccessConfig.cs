@@ -1,6 +1,7 @@
 ﻿using System;
 using lifebet.dataaccess.Context;
 using lifebet.dataaccess.Repositories;
+using lifebet.dataaccess.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +16,7 @@ namespace lifebet.dataaccess.InjectionConfig
                     options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IEventRepository, EventRepository>();
+            services.AddScoped<IBettingUnitOfWork, BettingUnitOfWork>();
         }
     }
 }

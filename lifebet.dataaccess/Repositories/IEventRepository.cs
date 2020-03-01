@@ -2,7 +2,7 @@
 
 namespace lifebet.dataaccess.Repositories
 {
-    public interface IEventRepository: IRepository<Event, int>
+    public interface IEventRepository : IRepository<Event, int>
     {
     }
 }

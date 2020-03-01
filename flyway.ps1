@@ -1,1 +1,1 @@
-﻿flyway migrate -user=lifebet_sa -password=pwd1 -url="jdbc:postgresql://localhost:5433/lifebet" locations="filesystem:./db_scripts"
+﻿flyway migrate -user=lifebet_sa -password=pwd1 -url="jdbc:postgresql://localhost:5433/lifebet" -locations="filesystem:db_scripts"

@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Folder Include="Context\" />
+    <Folder Include="EntityMapping\" />
+    <Folder Include="UnitOfWork\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.2" />

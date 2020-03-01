@@ -11,5 +11,10 @@ namespace lifebet.dataaccess.Context
         }
 
         public DbSet<Event> Events { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+        }
     }
 }
