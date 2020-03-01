@@ -12,8 +12,9 @@ namespace lifebet.dataaccess.InjectionConfig
     {
         public static void AddDataAccess(this IServiceCollection services, IConfiguration configuration)
         {
-               services.AddDbContext<LifebetContext>(options =>
-                    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<LifebetContext>(options =>
+                 options.UseNpgsql(connectionString));
 
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IBettingUnitOfWork, BettingUnitOfWork>();

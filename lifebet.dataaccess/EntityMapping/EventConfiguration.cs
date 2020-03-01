@@ -13,6 +13,10 @@ namespace lifebet.dataaccess.EntityMapping
 
             builder.HasKey(x => x.Id);
 
+            builder.Property(x => x.Id)
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd();
+
             builder.Property(x => x.Name)
                 .HasColumnName("event_name");
         }
