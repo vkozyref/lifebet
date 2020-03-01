@@ -1,4 +1,5 @@
 ﻿
+# docker run -p 5433:5432 postgres
 # psql -U postgres --password -h localhost -p 5433 postgres -f ./local_db_create.sql
 
 CREATE USER lifebet_sa WITH PASSWORD 'pwd1';
