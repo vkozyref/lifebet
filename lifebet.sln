@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lifebet", "lifebet\lifebet.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lifebet.dataaccess", "lifebet.dataaccess\lifebet.dataaccess.csproj", "{B0211F1E-6FEB-4DD3-BF4C-470045F69453}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateDatabase", "CreateDatabase", "{873C41E2-A7C7-463D-A89C-94ADAEF2DB56}"
+	ProjectSection(SolutionItems) = preProject
+		local_db_create.sql = local_db_create.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
